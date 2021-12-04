@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 29 Nov 2021 pada 02.51
+-- Waktu pembuatan: 04 Des 2021 pada 11.33
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 7.4.22
 
@@ -31,16 +31,16 @@ CREATE TABLE `sekolah` (
   `id` int(11) NOT NULL,
   `nama` varchar(155) NOT NULL,
   `telpon` varchar(12) NOT NULL,
-  `alamat` varchar(255) NOT NULL
+  `alamat` varchar(255) NOT NULL,
+  `gambar` varchar(155) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `sekolah`
 --
 
-INSERT INTO `sekolah` (`id`, `nama`, `telpon`, `alamat`) VALUES
-(2, 'mualimin', '089', 'jombang'),
-(3, 'smk ti', '078923', 'jombang');
+INSERT INTO `sekolah` (`id`, `nama`, `telpon`, `alamat`, `gambar`) VALUES
+(2079, 'Mualimin Mualimat', '089676041493', 'Jombang', '20211204113059.png');
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,7 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id`, `nis`, `nama`, `tgl_lahir`, `sekolah_id`) VALUES
-(1, '200', 'moh zuz', '2021-11-28', 3);
+(6325, '12334512', 'mohammad zuz ubaidillah', '1996-11-05', 2079);
 
 --
 -- Indexes for dumped tables
