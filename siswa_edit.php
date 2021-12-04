@@ -76,19 +76,20 @@ if (isset($_GET['id-siswa'])) {
       <label for="exampleInputEmail1">Pilih siswa</label>
       <select class="form-control" name="txt-siswa_id" id="id_siswa">
         <?php
-        $sql = "SELECT * FROM siswa order by nama ASC";
+        $sql = "SELECT * FROM sekolah order by nama ASC";
         // pengiriman data ke mysql
         $query = mysqli_query($conn, $sql);
         $jml = mysqli_num_rows($query);
-        if ($jml==0) {
-          echo "<option value=\"\">--Lakukan Penambahan siswa--</option>";
-        }else{
-          echo "<option value=\"\">--Pilih siswa--</option>";
-          while($data = mysqli_fetch_assoc($query)){
-            $id = $data['id'];
-            $nama = $data['nama'];
-            echo "<option value=\"$id\">$nama</option>";
+        echo "<option value=\"\">--Pilih Sekolah--</option>";
+        while($data = mysqli_fetch_assoc($query)){
+          $id = $data['id'];
+          $nama = $data['nama'];
+          if ($id==$sekolah_id) {
+            $selected = 'selected';
+          }else{
+            $selected = '';
           }
+          echo "<option $selected value=\"$id\">$nama</option>";
         }
         ?>
       </select>
