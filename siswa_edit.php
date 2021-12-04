@@ -51,8 +51,7 @@ if (isset($_GET['id-siswa'])) {
 <div class="container">
   <h1>Edit Data siswa</h1>
 
-  <form method="post" action="siswa_edit_proses.php">
-  <!-- <form method="post" action="siswa_tambah.php"> -->
+  <form method="post" action="siswa_edit_proses.php?id-siswa=<?=$id;?>">
     <div class="form-group">
       <label for="exampleInputEmail1">Nama</label>
       <input value="<?=$nama;?>" name="txt-nama" id="nama" autofocus type="text" class="form-control" placeholder="isikan nama">
@@ -73,8 +72,8 @@ if (isset($_GET['id-siswa'])) {
     </div>
 
     <div class="form-group">
-      <label for="exampleInputEmail1">Pilih siswa</label>
-      <select class="form-control" name="txt-siswa_id" id="id_siswa">
+      <label for="exampleInputEmail1">Pilih Sekolah</label>
+      <select class="form-control" name="txt-sekolah_id" id="id_sekolah">
         <?php
         $sql = "SELECT * FROM sekolah order by nama ASC";
         // pengiriman data ke mysql
