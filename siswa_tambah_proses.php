@@ -6,6 +6,8 @@ include './koneksi.php';
 //   ["txt-tgl_lahir"]=> string(10) "1997-11-11"
 //   ["txt-sekolah_id"]=> string(4) "2079"
 // }
+// echo "<pre>";
+// var_dump($_REQUEST);die();
 
 // deklarasi variabel
 $nama = $_POST['txt-nama'];
