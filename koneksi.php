@@ -5,7 +5,7 @@ date_default_timezone_set('Asia/Jakarta');
 $host = 'localhost';
 $username = 'root';
 $password = '';
-$db = 'db_sekolah';
+$db = 'db_sekolah_gambar';
 
 // cara 1
 $conn = mysqli_connect($host, $username, $password, $db);
